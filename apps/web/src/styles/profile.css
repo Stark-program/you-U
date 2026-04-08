@@ -1,0 +1,85 @@
+.profile {
+  min-height: 100vh;
+  padding: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(165deg, #0c1224 0%, #070a12 45%, #0a0f1c 100%);
+  color: #e8eefc;
+}
+
+.profile__header {
+  text-align: center;
+  max-width: 28rem;
+}
+
+.profile__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(232, 238, 252, 0.65);
+}
+
+.profile__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.profile__lede {
+  margin: 0 0 1.5rem;
+  color: rgba(203, 213, 245, 0.9);
+}
+
+.profile__actions {
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.75rem;
+}
+
+.profile__actionsSep {
+  color: rgba(148, 163, 184, 0.8);
+}
+
+.profile__link {
+  display: inline-flex;
+  color: #a5b4fc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile__link:hover {
+  text-decoration: underline;
+}
+
+.profile__link:focus-visible {
+  outline: 2px solid rgba(129, 140, 248, 0.85);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.profile__signOut {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: #94a3b8;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.profile__signOut:hover {
+  color: #cbd5e1;
+}
+
+.profile__signOut:focus-visible {
+  outline: 2px solid rgba(129, 140, 248, 0.85);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
