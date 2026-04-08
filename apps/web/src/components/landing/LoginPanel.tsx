@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import {
   isDemoLoginValid,
@@ -68,7 +68,9 @@ export function LoginPanel() {
         <p className="landing__footerNote">
           <span className="landing__linkLike">Forgot password?</span>
           <span aria-hidden> · </span>
-          <span className="landing__linkLike">Create an account</span>
+          <Link to="/register" className="landing__footerLink">
+            Create an account
+          </Link>
         </p>
       </div>
     </aside>
