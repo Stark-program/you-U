@@ -2,6 +2,10 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
+  background:
+    radial-gradient(120% 80% at 0% 0%, rgba(99, 102, 241, 0.2), transparent 55%),
+    radial-gradient(90% 70% at 100% 10%, rgba(244, 114, 182, 0.16), transparent 50%),
+    linear-gradient(160deg, #090f1e 0%, #070b13 55%, #080c14 100%);
 }
 
 @media (min-width: 900px) {
@@ -13,120 +17,111 @@
 
 .landing__hero {
   position: relative;
-  padding: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2.25rem, 5vw, 4.5rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1rem;
   overflow: hidden;
-  background: radial-gradient(
-      120% 80% at 10% 20%,
-      rgba(99, 102, 241, 0.35),
-      transparent 55%
-    ),
-    radial-gradient(
-      90% 70% at 80% 0%,
-      rgba(236, 72, 153, 0.22),
-      transparent 50%
-    ),
-    linear-gradient(165deg, #0c1224 0%, #070a12 45%, #0a0f1c 100%);
-  color: #e8eefc;
+  color: var(--text-50);
 }
 
 .landing__heroGlow {
   position: absolute;
-  inset: -20% -10% auto auto;
+  inset: -18% -12% auto auto;
   width: min(520px, 70vw);
   height: min(520px, 70vw);
   background: radial-gradient(
     circle at 30% 30%,
-    rgba(56, 189, 248, 0.35),
+    rgba(96, 165, 250, 0.35),
     transparent 60%
   );
-  filter: blur(40px);
+  filter: blur(48px);
   pointer-events: none;
 }
 
 .landing__eyebrow {
   margin: 0;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(232, 238, 252, 0.65);
+  color: rgba(226, 232, 240, 0.74);
 }
 
 .landing__title {
   margin: 0;
-  font-size: clamp(2.5rem, 6vw, 3.75rem);
-  font-weight: 700;
+  font-size: clamp(2.7rem, 6vw, 4rem);
+  font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1.05;
+  line-height: 1;
+  text-wrap: balance;
 }
 
 .landing__tagline {
   margin: 0;
-  font-size: clamp(1.1rem, 2.4vw, 1.35rem);
-  color: rgba(232, 238, 252, 0.88);
+  font-size: clamp(1.08rem, 2.4vw, 1.45rem);
+  color: rgba(226, 232, 240, 0.88);
+  font-weight: 550;
 }
 
 .landing__lede {
-  margin: 0.75rem 0 0;
-  max-width: 34rem;
-  color: rgba(203, 213, 245, 0.82);
-  font-size: 1rem;
+  margin: 0.5rem 0 0;
+  max-width: 36rem;
+  color: rgba(203, 213, 245, 0.85);
+  font-size: 1.02rem;
 }
 
 .landing__aside {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(2rem, 5vw, 3rem);
-  background: linear-gradient(180deg, #0f141c 0%, #0b0e14 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: clamp(2rem, 5vw, 3.2rem);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.42) 0%, rgba(10, 14, 23, 0.78) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
 }
 
 @media (min-width: 900px) {
   .landing__aside {
     border-top: none;
-    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
 .landing__panel {
-  width: min(100%, 22rem);
-  padding: 1.75rem 1.5rem;
-  border-radius: 1rem;
-  background: rgba(15, 20, 28, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow:
-    0 24px 48px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  width: min(100%, 23.5rem);
+  padding: 1.9rem 1.6rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(19, 28, 45, 0.9) 0%, rgba(12, 17, 30, 0.9) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  box-shadow: var(--shadow-lg);
 }
 
 .landing__panelTitle {
-  margin: 0 0 0.35rem;
-  font-size: 1.25rem;
-  color: #f1f5f9;
+  margin: 0 0 0.4rem;
+  font-size: 1.4rem;
+  color: var(--text-50);
+  letter-spacing: -0.01em;
 }
 
 .landing__panelHint {
-  margin: 0 0 1.25rem;
-  font-size: 0.8125rem;
-  color: #94a3b8;
+  margin: 0 0 1.35rem;
+  font-size: 0.86rem;
+  color: var(--text-300);
 }
 
 .landing__form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.05rem;
 }
 
 .landing__formError {
   margin: 0;
-  padding: 0.5rem 0.65rem;
-  border-radius: 0.5rem;
-  font-size: 0.8125rem;
-  color: #fecaca;
+  padding: 0.58rem 0.7rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  color: var(--danger-300);
   background: rgba(127, 29, 29, 0.35);
   border: 1px solid rgba(248, 113, 113, 0.35);
 }
@@ -134,54 +129,63 @@
 .landing__field {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.4rem;
 }
 
 .landing__field label {
-  font-size: 0.8125rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: #cbd5e1;
+  color: var(--text-400);
 }
 
 .landing__field input {
-  padding: 0.65rem 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(6, 8, 12, 0.65);
-  color: #f8fafc;
+  padding: 0.72rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  background: rgba(6, 8, 12, 0.75);
+  color: var(--text-50);
   font-size: 1rem;
   outline: none;
   transition:
     border-color 0.15s ease,
+    background-color 0.15s ease,
     box-shadow 0.15s ease;
 }
 
 .landing__field input::placeholder {
-  color: #64748b;
+  color: rgba(100, 116, 139, 0.95);
+}
+
+.landing__field input:hover {
+  border-color: rgba(148, 163, 184, 0.45);
 }
 
 .landing__field input:focus-visible {
-  border-color: rgba(129, 140, 248, 0.85);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  border-color: rgba(129, 140, 248, 0.9);
+  background: rgba(8, 12, 20, 0.85);
+  box-shadow: var(--ring);
 }
 
 .landing__submit {
-  margin-top: 0.25rem;
-  padding: 0.7rem 1rem;
+  margin-top: 0.35rem;
+  padding: 0.8rem 1rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #0b1220;
-  background: linear-gradient(135deg, #a5b4fc 0%, #f472b6 100%);
+  background: var(--gradient-brand);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
   cursor: pointer;
   transition:
     filter 0.15s ease,
-    transform 0.1s ease;
+    transform 0.1s ease,
+    box-shadow 0.15s ease;
 }
 
 .landing__submit:hover {
-  filter: brightness(1.05);
+  filter: brightness(1.05) saturate(1.05);
+  box-shadow: 0 12px 26px rgba(129, 140, 248, 0.42);
 }
 
 .landing__submit:active {
@@ -189,34 +193,47 @@
 }
 
 .landing__footerNote {
-  margin: 1.25rem 0 0;
-  font-size: 0.75rem;
-  color: #64748b;
+  margin: 1.3rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text-300);
   text-align: center;
 }
 
 .landing__linkLike {
-  color: #94a3b8;
+  color: var(--text-300);
   cursor: default;
 }
 
+.landing__footerSep {
+  margin-inline: 0.35rem;
+  color: rgba(148, 163, 184, 0.7);
+}
+
 .landing__footerLink {
-  color: #cbd5e1;
+  color: var(--text-100);
   cursor: pointer;
   text-decoration: none;
-  font: inherit;
-  background: none;
-  border: none;
-  padding: 0;
+  font-weight: 600;
+  transition: color 0.15s ease;
 }
 
 .landing__footerLink:hover {
-  color: #f1f5f9;
+  color: var(--text-50);
   text-decoration: underline;
 }
 
 .landing__footerLink:focus-visible {
-  outline: 2px solid rgba(129, 140, 248, 0.85);
+  outline: 2px solid rgba(129, 140, 248, 0.9);
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: 3px;
+}
+
+@media (max-width: 520px) {
+  .landing__panel {
+    padding: 1.45rem 1.1rem;
+  }
+
+  .landing__title {
+    font-size: clamp(2.3rem, 10vw, 2.8rem);
+  }
 }

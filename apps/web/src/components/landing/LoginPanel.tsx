@@ -66,8 +66,10 @@ export function LoginPanel() {
           </button>
         </form>
         <p className="landing__footerNote">
-          <span className="landing__linkLike">Forgot password?</span>
-          <span aria-hidden> · </span>
+          <span className="landing__linkLike">New here?</span>
+          <span aria-hidden className="landing__footerSep">
+            ·
+          </span>
           <Link to="/register" className="landing__footerLink">
             Create an account
           </Link>

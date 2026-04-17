@@ -4,6 +4,41 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-950: #06080f;
+  --bg-900: #0b1220;
+  --bg-850: #101a2f;
+  --surface-900: rgba(15, 20, 28, 0.85);
+  --surface-800: rgba(20, 28, 43, 0.8);
+  --surface-700: rgba(32, 41, 59, 0.62);
+  --text-50: #f8fafc;
+  --text-100: #e2e8f0;
+  --text-300: #94a3b8;
+  --text-400: #cbd5e1;
+  --brand-300: #a5b4fc;
+  --brand-400: #818cf8;
+  --brand-500: #6366f1;
+  --accent-400: #f472b6;
+  --danger-300: #fecaca;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.85rem;
+  --radius-lg: 1.2rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 2.5rem;
+  --shadow-soft: 0 16px 40px rgba(2, 6, 23, 0.28);
+  --shadow-lg:
+    0 24px 48px rgba(2, 6, 23, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --ring: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  --gradient-brand: linear-gradient(135deg, var(--brand-300) 0%, var(--accent-400) 100%);
+}
+
 body {
   margin: 0;
   font-family:
@@ -13,11 +48,15 @@ body {
     Roboto,
     sans-serif;
   line-height: 1.5;
-  color: #0b1220;
-  background: #06080f;
+  color: var(--text-50);
+  background: var(--bg-950);
   min-height: 100vh;
 }
 
 #root {
   min-height: 100vh;
+}
+
+a {
+  color: inherit;
 }
